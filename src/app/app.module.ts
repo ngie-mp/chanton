@@ -9,7 +9,8 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatInputModule} from '@angular/material/input';
     LoginComponent
   ],
   imports: [
+    FlexLayoutModule,
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
