@@ -1,0 +1,47 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+.title {
+  font-size: 1.5em;
+  margin: 1.5em 0;
+
+}
+
+.cat-title {
+  font-size: 1em;
+  margin: 1.5em 0;
+}
+
+.btn-next {
+  position: fixed;
+  bottom: 0;
+  border-radius: 0;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.categories-container {
+  padding: 2em;
+  @include placeholder {
+    color: green !important;
+  }
+  .mat-autocomplete {
+    width: 180px;;
+  }
+  .test {
+    color: #333333;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0.5em 0;
+  }
+}
+
+
+.mat-button {
+  width: 100%;
+  background: gray;
+}

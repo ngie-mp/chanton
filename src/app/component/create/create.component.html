@@ -1,0 +1,40 @@
+
+<div class="container" fxLayout="column" fxLayoutAlign="flex-end">
+  <div class="categories-container" fxLayout="column" fxLayoutAlign="space-around">
+    <span class="title">Crea tu chanton! </span>
+    <span class="cat-title">Categorias</span>
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <mat-chip *ngFor="let fruit of categories"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="remove(fruit)">
+          {{fruit}}
+          <span matChipRemove *ngIf="removable">x</span>
+        </mat-chip>
+        <input #fruitInput
+               [formControl]="wordsCtrl"
+               [matAutocomplete]="auto"
+               [matChipInputFor]="chipList"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+      <mat-autocomplete #auto="matAutocomplete" (click)="show($event)" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let fruit of filteredCategories | async" [value]="fruit">
+          {{fruit}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <span class="cat-title">Numero</span>
+    <div class="test">
+      30
+    </div>
+    <span class="cat-title">Nombre de participantes</span>
+    <div class="test">
+      6
+    </div>
+
+  </div>
+
+  <button mat-button class="btn-next" [routerLink]="'/lobby'">Next</button>
+</div>

@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <form fxLayout="column" fxLayoutAlign="center center">
+      <div class="avantar-container">
+        Avatar
+      </div>
+      <span>User N°624</span>
+      <mat-form-field>
+        <mat-label>Code</mat-label>
+        <input matInput placeholder="00X00X00">
+      </mat-form-field>
+      <input matInput
+             type="text"
+             name="word"
+             [(ngModel)]="newWord">
+        {{ newWord }}
+    </form>
+    <div *ngFor="let word of words; index as i; first as isFirst">
+      {{ word.name }}
+      {{ word.letter }}
+      {{ word.category }}
+    </div>
+    <button mat-button [routerLink]="'/join'" (click)="join()">Join</button>
+    <button mat-button [routerLink]="'/create'" (click)="create()">Create</button>
+
+
+</div>
+

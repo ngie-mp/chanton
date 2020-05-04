@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  height: max-content;
+  position: relative;
+  background: black;
+  color: #fff;
+}
+
+button {
+  -webkit-appearance: none;
+  background: black;
+  border: 0;
+  outline:0;
+}
+
+.cat-title {
+  text-align: left;
+  margin: 55px 0;
+  display: block;
+  font-size: 2em;
+}
+
+.nav-btn {
+  width: 80%;
+}
+
+svg {
+  padding: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+  //position: absolute;
+  margin: 45px;
+  width: 70px;
+  height: 90px;
+}
+
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
